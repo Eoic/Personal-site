@@ -1,5 +1,15 @@
 import Config
 
+# Configure your database
+config :personal, Personal.Repo,
+  username: "postgres",
+  password: "2Web4Dev",
+  hostname: "localhost",
+  database: "personal_dev",
+  stacktrace: true,
+  show_sensitive_data_on_connection_error: true,
+  pool_size: 10
+
 # For development, we disable any cache and enable
 # debugging and code reloading.
 #
@@ -13,7 +23,7 @@ config :personal, PersonalWeb.Endpoint,
   check_origin: false,
   code_reloader: true,
   debug_errors: true,
-  secret_key_base: "0wQSYiBPA++/NE6n4jY70Stjgc//eeRBjxOlqo15g2j0ocbOEA9e4PoRiWmyXOpz",
+  secret_key_base: "LWmpXJZ1fZDFuih+yDZx1EOTcOtBIMlITyRQpusIpGGPayHWcj3dHcRyDR/4E+kp",
   watchers: [
     # Start the esbuild watcher by calling Esbuild.install_and_run(:default, args)
     esbuild: {Esbuild, :install_and_run, [:default, ~w(--sourcemap=inline --watch)]}

@@ -1,3 +1,37 @@
 <main class="container">
-  <h1> Nothing here yet... </h1>
+  <p class="alert alert-info" role="alert"><%= get_flash(@conn, :info) %></p>
+  <p class="alert alert-danger" role="alert"><%= get_flash(@conn, :error) %></p>
+  <%= @inner_content %>
 </main>
+
+<header>
+    <h1> Karolis Strazdas </h1>
+    <h3> Programmer at Indeform Ltd. </h3>
+    <p> Lithuania, Kaunas </p>
+</header>
+
+<nav>
+  <a href="#everything"> Everything </a>
+  <a href="#positions"> Positions </a>
+  <a href="#projects"> Projects </a>
+  <a href="#education"> Education </a>
+</nav>
+
+<article class="tab">
+  <article>
+    <span> Position | Jul, 2020 - Current (2 years, 5 months) </span>
+    <h3> Programmer at Indeform Ltd. </h3>
+    <p>
+      • Developing interactive wall projection games and tools with OpenCV in C++ and Python, Godot, ImGui.
+      • Doing web development and graphics programming for orthopedics software.
+      • Working on internal software solutions for the web platform.
+      • Writing, maintaining and executing manual functional tests, creating automatic tests.
+    </p>
+    <ul>
+      <li> Node.js </li>
+      <li> Django </li>
+      <li> Python </li>
+      <li> JavaScript </li>
+    </ul>
+  </article>
+</article>

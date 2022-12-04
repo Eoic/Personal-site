@@ -7,7 +7,7 @@ defmodule PersonalWeb.Endpoint do
   @session_options [
     store: :cookie,
     key: "_personal_key",
-    signing_salt: "WBlYVCwv"
+    signing_salt: "WGiE3AEj"
   ]
 
   socket "/live", Phoenix.LiveView.Socket, websocket: [connect_info: [session: @session_options]]
@@ -28,6 +28,7 @@ defmodule PersonalWeb.Endpoint do
     socket "/phoenix/live_reload/socket", Phoenix.LiveReloader.Socket
     plug Phoenix.LiveReloader
     plug Phoenix.CodeReloader
+    plug Phoenix.Ecto.CheckRepoStatus, otp_app: :personal
   end
 
   plug Phoenix.LiveDashboard.RequestLogger,

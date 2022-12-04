@@ -7,12 +7,15 @@
 # General application configuration
 import Config
 
+config :personal,
+  ecto_repos: [Personal.Repo]
+
 # Configures the endpoint
 config :personal, PersonalWeb.Endpoint,
   url: [host: "localhost"],
   render_errors: [view: PersonalWeb.ErrorView, accepts: ~w(html json), layout: false],
   pubsub_server: Personal.PubSub,
-  live_view: [signing_salt: "8RJUPKde"]
+  live_view: [signing_salt: "CrwLV641"]
 
 # Configures the mailer
 #
